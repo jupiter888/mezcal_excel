@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 file_path = "/Agave_Spirits_Sales/Seznam faktur vystavených 04.09.23 cleaned.xlsx"
 df = pd.read_excel(file_path)
 
-# convert the "Dat.vystaveni" column to datetime format
+# convert the "Dat.vystavení" column to datetime format
 # handle variations in date formats by using the errors='coerce' parameter when converting the 'Dat.vystaveni' column to datetime.
 # this parameter will handle errors by setting the problematic dates to NaT (Not a Timestamp)
 df['Dat.vystavení'] = pd.to_datetime(df['Dat.vystavení'], format='%d.%m.%Y', errors='coerce')
